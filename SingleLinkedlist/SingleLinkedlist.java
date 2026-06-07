@@ -60,6 +60,58 @@
       }
 
 
+      public void deletebegin(){
+
+       if(head==null){
+           System.out.println(
+                   "LIST IS EMPTy"
+           );
+       }
+
+       head=head.next;
+       size--;
+
+      }
+
+
+      public void deleteend(){
+
+       if(head==null){
+           System.out.println("list is empty");
+       }
+
+       if(head.next==null){
+           head=null;
+           size--;
+           return;
+       }
+
+       Node temp=head;
+       while(temp.next.next!=null){
+           temp=temp.next;
+       }
+
+       temp.next=null;
+       size--;
+      }
+
+      public void deletepos(int index){
+
+       Node temp;
+       temp=head;
+
+       if(index==1){
+           deletebegin();
+       }
+       if(index==size){
+           deleteend();
+       }
+
+       for(int i=1;i<index-1;i++){
+           temp=temp.next;
+       }
+       temp.next=temp.next.next;
+      }
    public void display(){
 
        Node temp;

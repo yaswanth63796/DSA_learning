@@ -8,6 +8,8 @@ public class DemoApplication {
              list.insertbegin(33);
              list.insertend(55);
              //list.insertpos(99,2);
+            //list.deleteend();
+            list.deletepos(2);
              list.display();
         }
 }
