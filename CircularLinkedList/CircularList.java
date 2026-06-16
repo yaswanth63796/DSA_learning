@@ -104,6 +104,33 @@ class CircularList{
         size--;
     }
 
+  public void deletepos(int index){
+        Node temp=head;
+
+          if(head==null){
+              System.out.println("list is empty");
+          }
+
+          if(index<1 || index>size){
+              System.out.println("Invalid postion");
+              return;
+          }
+
+          if(index==1){
+              deletefirst();
+              return;
+          }
+          if(index==size){
+              deletelast();
+              return;
+          }
+          for(int i=1;i<index-1;i++){
+              temp=temp.next;
+          }
+          temp.next=temp.next.next;
+          size--;
+  }
+
     public void display(){
 
         Node temp=head;

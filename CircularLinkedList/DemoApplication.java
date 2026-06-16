@@ -6,10 +6,11 @@ public class DemoApplication{
         list.insertbegin(3);
         list.insertend(5);
         list.insertend(9);
+        list.insertend(11);
 
 
         list.display();
-        list.deletelast();
+        list.deletepos(3);
         list.display();
     }
 }
