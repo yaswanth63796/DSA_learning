@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class DemoApplication {
     public static void main(String[] args) {
 
@@ -11,6 +13,10 @@ public class DemoApplication {
         System.out.println();
         Node.inorder(root);
         System.out.println();
+        Node.postorder(root);
+        System.out.println();
+        List<List<Integer>>result=Node.levelorder(root);
+        System.out.println(Node.levelorder(root));
 
     }
 }
